@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- The doctype declaration above tells the web browser about the document type and version of HTML. -->
+
+<html>
+  <head>
+    <!-- The head section contains meta information, scripts, and links to external resources. -->
+    <h1>Chord Generator</h1>
+    <h2>Sergio Paul</h2>
+    <!-- The title tag sets the title of the web page as it appears in the browser tab. -->
+    <title>Sergio's Chord Generator</title>
+
+    <!-- This script tag links to the WebMidi.js library, enabling MIDI functionality in the web browser. -->
+    <script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
+
+    <!-- This script tag links to the external JavaScript file that contains the logic for handling MIDI devices. -->
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <div>
+      <!-- The body section contains the content of the web page. -->
+      <h3>
+        This tool converts a single MIDI note to a chord of your choice. Select
+        your MIDI device and the quality of your chord, then play a MIDI note to
+        activate the tool.
+      </h3>
+      <!-- An h1 header that provides a title or a brief description of the page's purpose. -->
+    </div>
+
+    <div>
+      <!-- A division or a section in an HTML document, used here to group the input device selector. -->
+      <label for="dropdown-ins">Select a MIDI Input:</label>
+      <!-- The label tag defines a label for the select element below. The 'for' attribute specifies which form element the label is bound to. -->
+      <select id="dropdown-ins">
+        <!-- The select tag represents a drop-down list. The id attribute is used to identify the element in CSS and JavaScript. -->
+        <!-- Options for the drop-down list are dynamically added through the script.js file. -->
+      </select>
+    </div>
+
+    <div>
+      <!-- Another division for grouping the output device selector. -->
+      <label for="dropdown-outs">Select a MIDI Output:</label>
+      <!-- Similar to the input label, this defines a label for the MIDI output selector. -->
+      <select id="dropdown-outs">
+        <!-- This select element is for choosing a MIDI output device. -->
+        <!-- Like the input selector, options are added dynamically via script.js. -->
+      </select>
+    </div>
+
+    <div>
+      <label for="chordquality">Select Chord Quality:</label>
+      <select name="chordquality" id="chordquality">
+      <option value="major"> Major </option>
+      <option value="major7th"> Major 7th </option>
+      <option value="minor"> Minor </option>
+      <option value="minor7th"> Minor 7th </option>
+      <option value="dominant"> Dominant </option>
+      <option value="halfDiminished"> Half Diminished </option>
+      <option value="fullDiminished"> Full Diminished </option>
+      
+
+    </div>
+  </body>
+</html>
